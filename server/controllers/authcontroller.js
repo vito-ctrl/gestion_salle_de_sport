@@ -2,7 +2,6 @@ const User = require('../models/authmodels');
 const jwt = require('jsonwebtoken');
 const creatError = require('../utils/appError');
 const bcrypt = require('bcryptjs');
-// const { use } = require('react');
 
 exports.signup = async(req, res, next) => {
 
