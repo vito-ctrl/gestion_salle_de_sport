@@ -7,7 +7,7 @@ const Login = () => {
   const [errors, setErrors] = useState({})
     const [Formdata, setFormdata] = useState({
         email: '',
-        password: ''
+        password: '',
     });
     const navigate = useNavigate();
 
@@ -69,11 +69,11 @@ const Login = () => {
                   localStorage.setItem('user', JSON.stringify(data.user));
                   
                   // Redirect based on user role
-                  if (data.user.role === 'admin') {
-                      navigate('/admin-dashboard');
-                  } else {
-                      navigate('/dashboard');
-                  }
+                  // if (data.user.role === 'user') {
+                  //     navigate('/reservation');
+                  // } else {
+                  //     navigate('/admin-dashboard');
+                  // }
               } else {
                    // Handle server errors
                    setErrors({
