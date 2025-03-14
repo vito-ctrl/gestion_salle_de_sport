@@ -1,20 +1,25 @@
 const mongoose = require ('mongoose');
 
 const revervSchema = new mongoose.Schema({
-    fName:{
+    title:{
         type: String,
         require: true
     },
-    lName:{
+    startTime:{
         type: String,
         require: true
     },
-    guest:{
-        type: Number,
+    endTime:{
+        type: String,
         require: true
     },
-    date:{
+    eventDate: {
+        type: Date,
+        required: true
+    },
+    eventTheme: {
         type: String,
+        default: 'blue'
     }
 })
 

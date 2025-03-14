@@ -69,11 +69,12 @@ const Login = () => {
                   localStorage.setItem('user', JSON.stringify(data.user));
                   
                   // Redirect based on user role
-                  // if (data.user.role === 'user') {
-                  //     navigate('/reservation');
-                  // } else {
-                  //     navigate('/admin-dashboard');
-                  // }
+                  if (data.user.role === 'admin') {
+                      navigate('/reservation');
+                  } 
+                  if (data.user.role === 'user'){
+                      navigate('/user');
+                  }
               } else {
                    // Handle server errors
                    setErrors({
